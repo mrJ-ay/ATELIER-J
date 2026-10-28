@@ -25,7 +25,7 @@ const rooms = [
       { title: 'INKVOID', year: '2026.10', kind: '문학', url: 'https://inkvoid-eoqx.onrender.com', shot: 'inkvoid.png',
         text: '작가들이 쓴 이야기를 서재에 모아 읽고, 직접 집필도 할 수 있는 소설 라이브러리.' },
       { title: 'NEON STRIP', year: '2026.10', kind: '게임', url: 'https://vegas-slots-2izy.onrender.com', shot: 'vegas.png',
-        text: '라스베이거스와 LA의 밤. 유저끼리 돈을 빌려주고, 빌리고, 터뜨리는 슬롯 카지노.' },
+        text: '라스베이거스와 LA의 밤. 유저끼리 돈을 빌려주고, 빌리고, 터뜨리는 슬롯 카지노. 예제로 만든 겁니다. 절대 불순한 의도로 만든 게 아닙니다.' },
       { title: 'WORDLENS', year: '2026.10', kind: '학습', url: 'https://wordlens-app.onrender.com', shot: 'wordlens.png',
         text: '단어책을 찍으면 AI가 읽어 암기 덱으로 바꿔 주는 단어 암기 앱.' },
     ],
