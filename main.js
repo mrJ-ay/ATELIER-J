@@ -20,8 +20,8 @@ const rooms = [
     period: '2026.10',
     note: '하나의 로그인으로 여러 작품이 이어지기 시작한 달.',
     works: [
-      { title: 'NOVA', year: '2026.10', kind: '영상', url: 'https://nova-hmqj.onrender.com', shot: 'nova.png', restoring: true,
-        text: '영상을 올리고 검색하는 플랫폼. 지금은 영상 서버 연결을 복구하는 중입니다.' },
+      { title: 'NOVA', year: '2026.10', kind: '영상', url: 'https://nova-hmqj.onrender.com', shot: 'nova.png',
+        text: '누구나 영상을 올리고 검색해 바로 감상할 수 있는 스트리밍 플랫폼.' },
       { title: 'INKVOID', year: '2026.10', kind: '문학', url: 'https://inkvoid-eoqx.onrender.com', shot: 'inkvoid.png',
         text: '작가들이 쓴 이야기를 서재에 모아 읽고, 직접 집필도 할 수 있는 소설 라이브러리.' },
       { title: 'NEON STRIP', year: '2026.10', kind: '게임', url: 'https://vegas-slots-2izy.onrender.com', shot: 'vegas.png',
