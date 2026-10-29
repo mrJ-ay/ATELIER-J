@@ -28,6 +28,8 @@ const rooms = [
         text: '라스베이거스와 LA의 밤. 유저끼리 돈을 빌려주고, 빌리고, 터뜨리는 슬롯 카지노. 예제로 만든 겁니다. 절대 불순한 의도로 만든 게 아닙니다.' },
       { title: 'WORDLENS', year: '2026.10', kind: '학습', url: 'https://wordlens-app.onrender.com', shot: 'wordlens.png',
         text: '단어책을 찍으면 AI가 읽어 암기 덱으로 바꿔 주는 단어 암기 앱.' },
+      { title: 'HELPDESK', year: '2026.10', kind: '고객센터', url: 'https://oneid-helpdesk.onrender.com', shot: 'helpdesk.png',
+        text: '전체 연결 사이트의 1:1 문의와 정지 계정 소명·이의신청을 접수하고 관리자 답변을 확인하는 통합 고객센터.' },
     ],
   },
 ]
