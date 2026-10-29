@@ -32,6 +32,16 @@ const rooms = [
         text: '전체 연결 사이트의 1:1 문의와 정지 계정 소명·이의신청을 접수하고 관리자 답변을 확인하는 통합 고객센터.' },
     ],
   },
+  {
+    id: 'III',
+    title: '제3전시실',
+    period: '2026.10 —',
+    note: '예전에 멈췄던 작업을 다시 꺼내 끝까지 완성한 스튜디오.',
+    works: [
+      { title: 'SONORA', year: '2026.10', kind: '음악 · DAW', url: 'https://sonora-daw.onrender.com', shot: 'sonora.png',
+        text: '브라우저 안에서 비트 시퀀서, 피아노롤, 신스, 편곡 타임라인, 콘솔 믹서로 곡을 만들고 WAV로 추출하는 웹 DAW 스튜디오.' },
+    ],
+  },
 ]
 
 const roomsEl = document.getElementById('rooms')
