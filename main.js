@@ -29,7 +29,7 @@ const rooms = [
       { title: 'WORDLENS', year: '2026.10', kind: '학습', url: 'https://wordlens-app.onrender.com', shot: 'wordlens.png',
         text: '단어책을 찍으면 AI가 읽어 암기 덱으로 바꿔 주는 단어 암기 앱.' },
       { title: 'HELPDESK', year: '2026.10', kind: '고객센터', url: 'https://oneid-helpdesk.onrender.com', shot: 'helpdesk.png',
-        text: '전체 연결 사이트의 1:1 문의와 정지 계정 소명·이의신청을 접수하고 관리자 답변을 확인하는 통합 고객센터.' },
+        text: '전체 연결 사이트의 1:1 문의와 정지 계정 소명·이의신청, 아이디어 및 기능 추천을 접수하고 관리자 답변을 확인하는 통합 고객센터.' },
     ],
   },
   {
