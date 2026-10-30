@@ -1,7 +1,8 @@
-﻿$edge = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
-$out = '$PSScriptRoot\shots'
+$edge = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
+$out = "$PSScriptRoot\shots"
 New-Item -ItemType Directory -Force $out | Out-Null
 $sites = [ordered]@{
+  jarket   = 'https://jarket.onrender.com'
   wordlens = 'https://wordlens-app.onrender.com'
   vegas    = 'https://vegas-slots-2izy.onrender.com'
   inkvoid  = 'https://inkvoid-eoqx.onrender.com'

@@ -36,10 +36,12 @@ const rooms = [
     id: 'III',
     title: '제3전시실',
     period: '2026.10 —',
-    note: '예전에 멈췄던 작업을 다시 꺼내 끝까지 완성한 스튜디오.',
+    note: '예전에 멈췄던 작업을 다시 꺼내 완성한 스튜디오와 가상 경제 마켓.',
     works: [
       { title: 'SONORA', year: '2026.10', kind: '음악 · DAW', url: 'https://sonora-daw.onrender.com', shot: 'sonora.png',
         text: '브라우저 안에서 비트 시퀀서, 피아노롤, 신스, 편곡 타임라인, 콘솔 믹서로 곡을 만들고 WAV로 추출하는 웹 DAW 스튜디오.' },
+      { title: 'JARKET', year: '2026.10', kind: '가상 마켓 · 쇼핑', url: 'https://jarket.onrender.com', shot: 'jarket.png',
+        text: '이마트 감성의 초가성비 버추얼 쇼핑몰. 네온스트립 슬롯머신 카지노 칩과 1:1 연동되며, 유저들이 직접 물품을 등록해 판매하고 카지노 칩을 벌 수 있는 가상 마켓.' },
     ],
   },
 ]
