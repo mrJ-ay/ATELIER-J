@@ -42,6 +42,8 @@ const rooms = [
         text: '브라우저 안에서 비트 시퀀서, 피아노롤, 신스, 편곡 타임라인, 콘솔 믹서로 곡을 만들고 WAV로 추출하는 웹 DAW 스튜디오.' },
       { title: 'JARKET', year: '2026.10', kind: '가상 마켓 · 쇼핑', url: 'https://jarket.onrender.com', shot: 'jarket.png',
         text: '이마트 감성의 초가성비 버추얼 쇼핑몰. 네온스트립 슬롯머신 카지노 칩과 1:1 연동되며, 유저들이 직접 물품을 등록해 판매하고 카지노 칩을 벌 수 있는 가상 마켓.' },
+      { title: 'NEXUS EXCHANGE', year: '2026.10', kind: '증권 · 가상 거래소', url: 'https://nexus-exchange-l9i8.onrender.com', shot: 'nexus.png',
+        text: '살아 숨쉬는 2.5초 캔들스틱 차트와 실시간 10단계 호가창. 유저가 직접 50만 칩으로 기업공개(IPO)를 진행하고 주식을 상장하거나, 네온 비트코인과 자켓홀딩스 주식을 거래하는 하이엔드 가상 증권거래소.' },
       { title: 'GRAND THEFT BICYCLE', year: '2026.10', kind: '레트로 액션 · 게임', url: 'https://grand-theft-bicycle.onrender.com', shot: 'gtb.png',
         text: '레트로 GTA 1풍 탑다운 2D 자전거 절도 & 장물 시뮬레이터. 자전거를 훔쳐 5분간 버티면 슬롯 카지노 자금 100만원 획득, 경찰차와 도보 경찰관의 맹추격을 따돌려 장물아비 찹샵에 매각하는 액션 아케이드.' },
       { title: 'ONE BANK', year: '2026.10', kind: '핀테크 · 인터넷 뱅킹', url: 'https://one-bank-lm2p.onrender.com', shot: 'onebank.png',

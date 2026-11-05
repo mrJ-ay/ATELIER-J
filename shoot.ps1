@@ -13,6 +13,7 @@ $sites = [ordered]@{
   oneid    = 'https://oneid-icvq.onrender.com'
   gtb      = 'https://grand-theft-bicycle.onrender.com'
   onebank  = 'https://one-bank-lm2p.onrender.com'
+  nexus    = 'https://nexus-exchange-l9i8.onrender.com'
 }
 foreach ($k in $sites.Keys) {
   $file = Join-Path $out "$k.png"
