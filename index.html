@@ -3,67 +3,84 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a0b10" />
-    <meta name="description" content="J-LABS · DearJ의 웹 프로젝트 모음" />
-    <title>J-LABS</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="DearJ · Projects and Research Index" />
+    <title>DearJ · Projects</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261108b" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=20261108c" />
   </head>
   <body>
-    <!-- Background Grid -->
-    <div class="bg-mesh" aria-hidden="true"></div>
-
-    <!-- Navigation -->
-    <header class="lab-nav">
-      <div class="nav-container">
-        <a class="nav-brand" href="#">
-          <span class="brand-text">J-LABS</span>
+    <!-- Top Sticky Navigation (OpenAI style) -->
+    <header class="header">
+      <div class="header-inner">
+        <a class="brand" href="#">
+          <span class="brand-name">DearJ</span>
         </a>
-        <nav class="nav-links">
-          <a href="https://oneid-helpdesk.onrender.com/?service=J-LABS" target="_blank" rel="noopener">고객센터 ↗</a>
+        <nav class="nav">
+          <a href="#featured">Featured</a>
+          <a href="#all-projects">All Projects</a>
+          <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener" class="nav-contact">Contact ↗</a>
         </nav>
       </div>
     </header>
 
-    <main class="main-container">
-      <!-- Minimal Hero -->
-      <section class="hero-section">
-        <h1 class="hero-title">J-LABS</h1>
-        <p class="hero-desc">DearJ가 만든 14개의 웹 프로젝트들을 모아둔 공간입니다.</p>
-      </section>
-
-      <!-- Category Filter & Search -->
-      <section class="controls-section">
-        <div class="filter-tabs" id="filterTabs">
-          <button class="filter-btn active" data-filter="all">전체 (14)</button>
-          <button class="filter-btn" data-filter="game">게임</button>
-          <button class="filter-btn" data-filter="finance">금융·거래</button>
-          <button class="filter-btn" data-filter="media">미디어·커뮤니티</button>
-          <button class="filter-btn" data-filter="tool">도구</button>
-        </div>
-        <div class="search-wrap">
-          <input type="text" id="searchInput" placeholder="검색..." autocomplete="off" />
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-inner">
+          <h1 class="hero-headline">Building web systems,<br />games, and economies.</h1>
+          <p class="hero-subline">DearJ가 개발한 14개의 독립 웹 서비스 및 시뮬레이션 모음입니다.</p>
         </div>
       </section>
 
-      <!-- Projects Grid -->
-      <section class="project-grid" id="projectGrid">
-        <!-- Dynamically rendered -->
+      <!-- Featured Showcase (OpenAI Hero Card style) -->
+      <section id="featured" class="section featured-section">
+        <div class="section-inner">
+          <div class="featured-grid" id="featuredGrid">
+            <!-- Rendered by main.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- All Projects Grid & Filter -->
+      <section id="all-projects" class="section all-section">
+        <div class="section-inner">
+          <div class="section-header">
+            <h2 class="section-title">Projects Index</h2>
+            <div class="category-tabs" id="categoryTabs">
+              <button class="tab-btn active" data-category="all">All</button>
+              <button class="tab-btn" data-category="game">Game</button>
+              <button class="tab-btn" data-category="finance">Finance</button>
+              <button class="tab-btn" data-category="media">Media</button>
+              <button class="tab-btn" data-category="tool">Tools</button>
+            </div>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <!-- Rendered by main.js -->
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="lab-footer">
-      <div class="footer-container">
-        <p class="cold-start-note">
-          ※ 무료 서버 특성상 처음 들어갈 때 로딩(30~50초)이 발생할 수 있습니다.
-        </p>
-        <p class="copyright">© J-LABS · DearJ</p>
+    <!-- Footer (OpenAI minimal style) -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">DearJ</span>
+          <p class="footer-note">무료 인스턴스 특성상 첫 접속 시 30~50초의 서버 기상 시간이 소요될 수 있습니다.</p>
+        </div>
+        <div class="footer-right">
+          <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID</a>
+          <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">Helpdesk</a>
+          <a href="https://github.com/mrJ-ay" target="_blank" rel="noopener">GitHub ↗</a>
+          <span class="copyright">© 2026 DearJ</span>
+        </div>
       </div>
     </footer>
 
-    <script type="module" src="main.js?v=20261108b"></script>
+    <script type="module" src="main.js?v=20261108c"></script>
   </body>
 </html>

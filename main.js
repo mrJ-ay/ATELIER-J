@@ -1,178 +1,227 @@
-// J-LABS Projects Dataset (간결한 사이트 핵심 기능 중심)
+// OpenAI Style Project Dataset
 export const projects = [
   {
-    title: 'DODGE TOTO',
+    id: 'dodgetoto',
+    title: 'Dodge Toto',
     category: 'game',
-    kind: '피구 시뮬레이션 & 토토',
+    tag: 'Sports Simulation',
+    date: 'Nov 2026',
     url: 'https://dodge-toto.onrender.com',
     shot: 'dodgetoto.png',
-    desc: '봇들이 실시간으로 피구 경기를 펼치고, 승패에 칩을 베팅하는 스포츠 토토 사이트.'
+    desc: '알고리즘 봇들이 실제 피구 규칙으로 경기하고, 배당률에 맞춰 베팅하는 스포츠 토토 시뮬레이션.',
+    featured: true
   },
   {
-    title: 'ONE BANK',
+    id: 'nexus',
+    title: 'Nexus Exchange',
     category: 'finance',
-    kind: '인터넷 뱅킹',
-    url: 'https://one-bank-lm2p.onrender.com',
-    shot: 'onebank.png',
-    desc: '가상 계좌(777) 발급, 유저 간 실시간 송금 및 매일 파킹이자를 받는 뱅킹 사이트.'
-  },
-  {
-    title: 'NEXUS EXCHANGE',
-    category: 'finance',
-    kind: '가상 증권거래소',
+    tag: 'Virtual Securities',
+    date: 'Oct 2026',
     url: 'https://nexus-exchange-l9i8.onrender.com',
     shot: 'nexus.png',
-    desc: '실시간 호가창과 캔들 차트를 보며 주식을 매매하고 직접 종목을 상장하는 거래소.'
+    desc: '2.5초 주기 캔들 차트와 실시간 호가창으로 주식 및 가상 코인을 거래하고 직접 상장(IPO)하는 증권거래소.',
+    featured: true
   },
   {
-    title: 'NEON STRIP',
+    id: 'onebank',
+    title: 'One Bank',
+    category: 'finance',
+    tag: 'Digital Banking',
+    date: 'Oct 2026',
+    url: 'https://one-bank-lm2p.onrender.com',
+    shot: 'onebank.png',
+    desc: '가상 계좌 발급, 사용자 간 실시간 계좌 이체, 매일 복리로 계산되는 파킹이자를 지원하는 인터넷 뱅킹.',
+    featured: false
+  },
+  {
+    id: 'vegas',
+    title: 'Neon Strip',
     category: 'game',
-    kind: '슬롯 카지노',
+    tag: 'Casino & Credit',
+    date: 'Oct 2026',
     url: 'https://vegas-slots-2izy.onrender.com',
     shot: 'vegas.png',
-    desc: '슬롯머신을 돌려 칩을 따고, 유저들끼리 칩을 빌려주고 갚는 카지노 게임 사이트.'
+    desc: '슬롯머신 게임과 사용자 간 칩 대출 및 상환 시스템이 결합된 가상 카지노 플랫폼.',
+    featured: false
   },
   {
-    title: 'JARKET',
+    id: 'jarket',
+    title: 'Jarket',
     category: 'finance',
-    kind: 'C2C 쇼핑몰',
+    tag: 'Virtual Commerce',
+    date: 'Oct 2026',
     url: 'https://jarket.onrender.com',
     shot: 'jarket.png',
-    desc: '유저가 직접 물건을 올리고 판매해 카지노 칩을 벌 수 있는 가상 중고 마켓.'
+    desc: '사용자가 직접 가상 상품을 등록해 판매하고 카지노 칩을 벌 수 있는 C2C 마켓플레이스.',
+    featured: false
   },
   {
-    title: 'GRAND THEFT BICYCLE',
+    id: 'gtb',
+    title: 'Grand Theft Bicycle',
     category: 'game',
-    kind: '2D 자전거 절도 액션',
+    tag: '2D Action Arcade',
+    date: 'Oct 2026',
     url: 'https://grand-theft-bicycle.onrender.com',
     shot: 'gtb.png',
-    desc: '경찰 추격을 따돌리며 자전거를 훔쳐 장물아비에게 팔아넘기는 레트로 액션 게임.'
+    desc: '경찰의 포위망을 피해 자전거를 훔치고 찹샵에 매각해 현상금을 챙기는 레트로 2D 탑다운 액션 게임.',
+    featured: false
   },
   {
-    title: 'CHAOS OMOK',
+    id: 'omok',
+    title: 'Chaos Omok',
     category: 'game',
-    kind: '온라인 대전 오목',
+    tag: 'Multiplayer Lobby',
+    date: 'Sep 2026',
     url: 'https://chaos-omok.onrender.com',
     shot: 'omok.png',
-    desc: '방을 만들어 친구와 함께 실시간으로 대전하고 관전할 수 있는 오목 사이트.'
+    desc: '실시간으로 방을 만들어 친구와 함께 대전하고 관전할 수 있는 웹소켓 기반 온라인 오목.',
+    featured: false
   },
   {
-    title: 'SONORA',
+    id: 'sonora',
+    title: 'Sonora',
     category: 'media',
-    kind: '웹 작곡 스튜디오 (DAW)',
+    tag: 'Web DAW & Synth',
+    date: 'Oct 2026',
     url: 'https://sonora-daw.onrender.com',
     shot: 'sonora.png',
-    desc: '비트 시퀀서와 신디사이저로 직접 음악을 만들고 WAV로 추출하는 작곡 사이트.'
+    desc: '비트 시퀀서, 신디사이저, 피아노롤, 믹서를 통해 브라우저에서 음악을 작곡하고 WAV로 내보내는 웹 오디오 스튜디오.',
+    featured: false
   },
   {
-    title: 'PIGSTY',
+    id: 'pigsty',
+    title: 'Pigsty',
     category: 'media',
-    kind: '자유 커뮤니티',
+    tag: 'Clean Community',
+    date: 'Aug 2026',
     url: 'https://pigsty.onrender.com',
     shot: 'pigsty.png',
-    desc: '글과 사진, 영상을 자유롭게 올리고 검열봇이 클린하게 관리하는 커뮤니티.'
+    desc: '사진과 영상을 공유하는 자유 게시판 및 자모 분해 실시간 자동 검열봇이 상시 가동되는 커뮤니티.',
+    featured: false
   },
   {
-    title: 'NOVA',
+    id: 'nova',
+    title: 'Nova',
     category: 'media',
-    kind: '영상 스트리밍',
+    tag: 'Video Streaming',
+    date: 'Oct 2026',
     url: 'https://nova-hmqj.onrender.com',
     shot: 'nova.png',
-    desc: '누구나 영상을 업로드하고 플레이리스트를 만들어 감상하는 동영상 플랫폼.'
+    desc: '누구나 자유롭게 영상을 업로드하고 검색과 재생목록으로 시청할 수 있는 동영상 스트리밍 플랫폼.',
+    featured: false
   },
   {
-    title: 'INKVOID',
+    id: 'inkvoid',
+    title: 'Inkvoid',
     category: 'media',
-    kind: '웹소설 서재',
+    tag: 'Literature Reader',
+    date: 'Oct 2026',
     url: 'https://inkvoid-eoqx.onrender.com',
     shot: 'inkvoid.png',
-    desc: '작품을 서재에 모아 편하게 읽고, 직접 챕터를 집필해 등록하는 소설 사이트.'
+    desc: '서재에서 소설을 읽고 직접 작가로서 회차를 집필해 게시할 수 있는 웹소설 플랫폼.',
+    featured: false
   },
   {
-    title: 'WORDLENS',
+    id: 'wordlens',
+    title: 'Wordlens',
     category: 'tool',
-    kind: 'AI 단어 암기장',
+    tag: 'OCR Vision',
+    date: 'Oct 2026',
     url: 'https://wordlens-app.onrender.com',
     shot: 'wordlens.png',
-    desc: '단어장 사진을 찍으면 텍스트를 읽어 암기 퀴즈 덱으로 만들어 주는 학습 도구.'
+    desc: '단어장 사진을 촬영하면 글자를 인식해 퀴즈 및 암기 플래시카드 덱으로 자동 생성해 주는 에듀테크 도구.',
+    featured: false
   },
   {
-    title: 'FAKEPRESS',
+    id: 'fakepress',
+    title: 'FakePress',
     category: 'tool',
-    kind: '신문 기사 제작기',
+    tag: 'Press Layout',
+    date: 'Sep 2026',
     url: 'https://fakepress-1.onrender.com',
     shot: 'fakepress.png',
-    desc: '글을 쓰면 진짜 종이 신문 기사 모양으로 즉시 조판해 이미지로 뽑아주는 도구.'
+    desc: '제목과 내용을 입력하면 실제 종이 신문 기사 형식으로 실시간 조판해 주는 가상 프레스 도구.',
+    featured: false
   },
   {
-    title: 'HELPDESK',
+    id: 'helpdesk',
+    title: 'Helpdesk',
     category: 'tool',
-    kind: '통합 고객센터',
+    tag: 'Customer Support',
+    date: 'Oct 2026',
     url: 'https://oneid-helpdesk.onrender.com',
     shot: 'helpdesk.png',
-    desc: '전체 서비스들의 1:1 문의, 기능 건의 및 계정 소명을 접수하는 고객센터.'
+    desc: '전체 서비스들의 1:1 고객 문의 접수, 기능 제안, 계정 제재 소명 처리를 일괄 수행하는 통합 고객센터.',
+    featured: false
   }
 ];
 
-const gridEl = document.getElementById('projectGrid');
-const filterBtns = document.querySelectorAll('.filter-btn');
-const searchInput = document.getElementById('searchInput');
+const featuredGrid = document.getElementById('featuredGrid');
+const projectsGrid = document.getElementById('projectsGrid');
+const categoryTabs = document.querySelectorAll('.tab-btn');
 
-let currentFilter = 'all';
-let currentSearch = '';
+let currentCategory = 'all';
 
-function renderProjects() {
-  const filtered = projects.filter((p) => {
-    const matchFilter = currentFilter === 'all' || p.category === currentFilter;
-    const matchSearch =
-      !currentSearch ||
-      p.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      p.kind.toLowerCase().includes(currentSearch.toLowerCase()) ||
-      p.desc.toLowerCase().includes(currentSearch.toLowerCase());
-    return matchFilter && matchSearch;
-  });
-
-  if (filtered.length === 0) {
-    gridEl.innerHTML = `
-      <div class="empty-state">
-        <p>검색 결과가 없습니다.</p>
-      </div>`;
-    return;
-  }
-
-  gridEl.innerHTML = filtered
+// Render Featured Cards (2 Columns Wide OpenAI Hero Card)
+function renderFeatured() {
+  const featured = projects.filter((p) => p.featured);
+  featuredGrid.innerHTML = featured
     .map(
       (p) => `
-    <a class="card-link" href="${p.url}" target="_blank" rel="noopener">
-      <article class="project-card">
-        <div class="card-media">
-          <img src="shots/${p.shot}" alt="${p.title}" loading="lazy" />
-          <span class="launch-pill">바로가기 ↗</span>
+    <a href="${p.url}" target="_blank" rel="noopener" class="featured-card">
+      <div class="featured-media">
+        <img src="shots/${p.shot}" alt="${p.title}" loading="lazy" />
+      </div>
+      <div class="featured-info">
+        <div class="card-meta">
+          <span class="card-tag">${p.tag}</span>
+          <span class="card-date">${p.date}</span>
         </div>
-        <div class="card-body">
-          <div class="card-kind">${p.kind}</div>
-          <h3 class="card-title">${p.title}</h3>
-          <p class="card-desc">${p.desc}</p>
-        </div>
-      </article>
+        <h3 class="card-title">${p.title}</h3>
+        <p class="card-desc">${p.desc}</p>
+        <span class="card-link-text">Launch project ↗</span>
+      </div>
     </a>`
     )
     .join('');
 }
 
-// Event Listeners
-filterBtns.forEach((btn) => {
+// Render All Projects
+function renderProjects() {
+  const filtered = projects.filter((p) => {
+    return currentCategory === 'all' || p.category === currentCategory;
+  });
+
+  projectsGrid.innerHTML = filtered
+    .map(
+      (p) => `
+    <a href="${p.url}" target="_blank" rel="noopener" class="project-card">
+      <div class="project-media">
+        <img src="shots/${p.shot}" alt="${p.title}" loading="lazy" />
+      </div>
+      <div class="project-info">
+        <div class="card-meta">
+          <span class="card-tag">${p.tag}</span>
+          <span class="card-date">${p.date}</span>
+        </div>
+        <h3 class="card-title">${p.title}</h3>
+        <p class="card-desc">${p.desc}</p>
+        <span class="card-arrow">↗</span>
+      </div>
+    </a>`
+    )
+    .join('');
+}
+
+// Category Tabs
+categoryTabs.forEach((btn) => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach((b) => b.classList.remove('active'));
+    categoryTabs.forEach((b) => b.classList.remove('active'));
     btn.classList.add('active');
-    currentFilter = btn.dataset.filter;
+    currentCategory = btn.dataset.category;
     renderProjects();
   });
 });
 
-searchInput?.addEventListener('input', (e) => {
-  currentSearch = e.target.value.trim();
-  renderProjects();
-});
-
+renderFeatured();
 renderProjects();
