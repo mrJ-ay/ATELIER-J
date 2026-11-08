@@ -3,208 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#090a10" />
-    <meta name="description" content="J-LABS · Autonomous Web Ecosystem & Experimental Engineering by DearJ" />
-    <title>J-LABS · Experimental Web Ecosystem & Engineering</title>
+    <meta name="theme-color" content="#0a0b10" />
+    <meta name="description" content="J-LABS · DearJ의 웹 프로젝트 모음" />
+    <title>J-LABS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261108a" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=20261108b" />
   </head>
   <body>
-    <!-- Background Grid & Glow Mesh -->
+    <!-- Background Grid -->
     <div class="bg-mesh" aria-hidden="true"></div>
-    <div class="bg-glow" aria-hidden="true"></div>
 
-    <!-- Header Navigation -->
+    <!-- Navigation -->
     <header class="lab-nav">
       <div class="nav-container">
-        <a class="nav-brand" href="#hero">
-          <span class="brand-badge">LABS</span>
+        <a class="nav-brand" href="#">
           <span class="brand-text">J-LABS</span>
-          <span class="brand-sub">RESEARCH</span>
         </a>
         <nav class="nav-links">
-          <a href="#ecosystem">생태계 구조</a>
-          <a href="#projects">프로젝트 인덱스</a>
-          <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID SSO ↗</a>
-          <a href="https://oneid-helpdesk.onrender.com/?service=J-LABS" class="btn-helpdesk" target="_blank" rel="noopener">고객센터 ↗</a>
+          <a href="https://oneid-helpdesk.onrender.com/?service=J-LABS" target="_blank" rel="noopener">고객센터 ↗</a>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section id="hero" class="hero-section">
-        <div class="hero-container">
-          <div class="hero-pill">
-            <span class="status-indicator"></span>
-            <span>AUTONOMOUS ECOSYSTEM · 2026</span>
-          </div>
-          <h1 class="hero-title">
-            CONNECTED DIGITAL<br />
-            <span class="gradient-text">ENGINEERING LAB</span>
-          </h1>
-          <p class="hero-desc">
-            가상 경제와 분산 원장, 실시간 물리 시뮬레이션, 미디어 스트리밍 및 보안 검열 시스템까지.<br />
-            DearJ가 독립적으로 설계하고 완성한 인터랙티브 풀스택 웹 생태계입니다.
-          </p>
+    <main class="main-container">
+      <!-- Minimal Hero -->
+      <section class="hero-section">
+        <h1 class="hero-title">J-LABS</h1>
+        <p class="hero-desc">DearJ가 만든 14개의 웹 프로젝트들을 모아둔 공간입니다.</p>
+      </section>
 
-          <!-- Lab Metrics Bar -->
-          <div class="metrics-bar">
-            <div class="metric-card">
-              <span class="metric-value">14</span>
-              <span class="metric-label">DEPLOYED APPS</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">1</span>
-              <span class="metric-label">UNIFIED ECONOMY</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">100%</span>
-              <span class="metric-label">SSO INTEGRATION</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-value">2.5s</span>
-              <span class="metric-label">REALTIME ENGINE</span>
-            </div>
-          </div>
+      <!-- Category Filter & Search -->
+      <section class="controls-section">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-btn active" data-filter="all">전체 (14)</button>
+          <button class="filter-btn" data-filter="game">게임</button>
+          <button class="filter-btn" data-filter="finance">금융·거래</button>
+          <button class="filter-btn" data-filter="media">미디어·커뮤니티</button>
+          <button class="filter-btn" data-filter="tool">도구</button>
+        </div>
+        <div class="search-wrap">
+          <input type="text" id="searchInput" placeholder="검색..." autocomplete="off" />
         </div>
       </section>
 
-      <!-- Ecosystem Architecture Map -->
-      <section id="ecosystem" class="section-container">
-        <div class="section-header">
-          <span class="section-code">// ARCHITECTURE 01</span>
-          <h2 class="section-title">가상 경제 & 계정 상호연동 생태계</h2>
-          <p class="section-desc">모든 서비스는 단일 계정(ONEID)과 공용 데이터베이스(Neon Postgres 원장)를 통해 실시간으로 자금과 데이터를 공유합니다.</p>
-        </div>
-
-        <div class="ecosystem-flow">
-          <div class="flow-card central-auth">
-            <div class="flow-pill">AUTHENTICATION HUB</div>
-            <h3>ONEID SSO</h3>
-            <p>단일 계정 로그인, JWT 인가, 전 사이트 보안 세션 자동 프로비저닝</p>
-          </div>
-          <div class="flow-arrow">⇄</div>
-          <div class="flow-card central-bank">
-            <div class="flow-pill">FINANCIAL LEDGER</div>
-            <h3>ONE BANK (중앙 파킹)</h3>
-            <p>가상 777 계좌, 연 3.5% 일일 이자, 실시간 통합 원장 (ns_ledger)</p>
-          </div>
-        </div>
-
-        <div class="connected-grid">
-          <div class="conn-node">
-            <div class="node-icon">📈</div>
-            <div class="node-body">
-              <strong>NEXUS EXCHANGE</strong>
-              <span>IPO 및 주식·코인 거래 자금</span>
-            </div>
-          </div>
-          <div class="conn-node">
-            <div class="node-icon">🎰</div>
-            <div class="node-body">
-              <strong>VEGAS SLOTS</strong>
-              <span>카지노 칩 & 대출망 연동</span>
-            </div>
-          </div>
-          <div class="conn-node">
-            <div class="node-icon">🛍️</div>
-            <div class="node-body">
-              <strong>JARKET</strong>
-              <span>C2C 마켓 물품 매매 수익</span>
-            </div>
-          </div>
-          <div class="conn-node">
-            <div class="node-icon">⚽</div>
-            <div class="node-body">
-              <strong>DODGE TOTO</strong>
-              <span>피구 토토 배당금 즉시 정산</span>
-            </div>
-          </div>
-          <div class="conn-node">
-            <div class="node-icon">🚲</div>
-            <div class="node-body">
-              <strong>GRAND THEFT BICYCLE</strong>
-              <span>장물 매각 대금 100만 칩 뱅킹 입금</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="section-container">
-        <div class="section-header-flex">
-          <div>
-            <span class="section-code">// INDEX 02</span>
-            <h2 class="section-title">연구 개발 프로젝트 인덱스</h2>
-          </div>
-          <div class="search-wrap">
-            <input type="text" id="searchInput" placeholder="프로젝트 또는 기술스택 검색..." autocomplete="off" />
-            <span class="search-icon">🔍</span>
-          </div>
-        </div>
-
-        <!-- Filter Controls -->
-        <div class="filter-bar">
-          <div class="filter-tabs" id="filterTabs">
-            <button class="filter-btn active" data-filter="all">ALL (14)</button>
-            <button class="filter-btn" data-filter="economy">VIRTUAL ECONOMY</button>
-            <button class="filter-btn" data-filter="games">GAMES & SIMULATION</button>
-            <button class="filter-btn" data-filter="media">MEDIA & PLATFORM</button>
-            <button class="filter-btn" data-filter="tools">TOOLS & AI</button>
-          </div>
-          <div class="sort-wrap">
-            <select id="sortSelect">
-              <option value="num-desc">연구 번호순 (최신순)</option>
-              <option value="num-asc">연구 번호순 (과거순)</option>
-              <option value="title">이름순 (A-Z)</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Project Grid -->
-        <div class="project-grid" id="projectGrid">
-          <!-- Dynamically populated by main.js -->
-        </div>
+      <!-- Projects Grid -->
+      <section class="project-grid" id="projectGrid">
+        <!-- Dynamically rendered -->
       </section>
     </main>
-
-    <!-- Deep-Dive Spec Modal -->
-    <div id="projectModal" class="modal-backdrop" aria-hidden="true">
-      <div class="modal-card">
-        <button class="modal-close" id="modalCloseBtn" aria-label="닫기">✕</button>
-        <div id="modalContent"></div>
-      </div>
-    </div>
 
     <!-- Footer -->
     <footer class="lab-footer">
       <div class="footer-container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <span class="footer-title">J-LABS RESEARCH</span>
-            <p>Designed & Engineered by DearJ. All rights reserved.</p>
-          </div>
-          <div class="footer-status">
-            <span class="status-indicator"></span>
-            <span>All systems operational · Render Cloud & Neon Database</span>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p class="cold-start-note">
-            ⚡ <strong>서버 기상 안내:</strong> 일부 프로젝트는 Render 무료 인스턴스에서 구동되어 슬립 상태일 경우 첫 접속 시 30~50초의 부팅 시간이 소요될 수 있습니다.
-          </p>
-          <div class="footer-links">
-            <a href="https://oneid-helpdesk.onrender.com/?service=J-LABS" target="_blank" rel="noopener">HELPDESK 고객센터</a>
-            <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID 통합 로그인</a>
-            <a href="https://github.com/mrJ-ay" target="_blank" rel="noopener">GitHub ↗</a>
-          </div>
-        </div>
+        <p class="cold-start-note">
+          ※ 무료 서버 특성상 처음 들어갈 때 로딩(30~50초)이 발생할 수 있습니다.
+        </p>
+        <p class="copyright">© J-LABS · DearJ</p>
       </div>
     </footer>
 
-    <script type="module" src="main.js?v=20261108a"></script>
+    <script type="module" src="main.js?v=20261108b"></script>
   </body>
 </html>
