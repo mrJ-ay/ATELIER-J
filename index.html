@@ -2,85 +2,139 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="ATELIER J · Projects and Web Systems Index" />
-    <title>ATELIER J</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="ATELIER J · 웹 아카이브 & 프로젝트 미술관" />
+    <title>ATELIER J · 아뜰리에 J</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261108d" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css?v=20261108e" />
   </head>
   <body>
-    <!-- Top Sticky Navigation (OpenAI style) -->
-    <header class="header">
+    <!-- Top Global Header -->
+    <header id="header" class="header">
       <div class="header-inner">
-        <a class="brand" href="#">
-          <span class="brand-name">ATELIER J</span>
-        </a>
-        <nav class="nav">
-          <a href="#featured">Featured</a>
-          <a href="#all-projects">All Projects</a>
-          <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener" class="nav-contact">Contact ↗</a>
+        <div class="logo">
+          <a href="#" class="logo-link">
+            <span class="logo-title">ATELIER J</span>
+            <span class="logo-sub">아뜰리에 J</span>
+          </a>
+        </div>
+        <nav class="gnb">
+          <ul>
+            <li><a href="#exhibitions">전시</a></li>
+            <li><a href="#archive">아카이브</a></li>
+            <li><a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">고객센터 ↗</a></li>
+            <li class="btn-sso"><a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID 로그인</a></li>
+          </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-inner">
-          <h1 class="hero-headline">Building web systems,<br />games, and economies.</h1>
-          <p class="hero-subline">ATELIER J에서 개발한 14개의 독립 웹 서비스 및 시뮬레이션 모음입니다.</p>
-        </div>
-      </section>
-
-      <!-- Featured Showcase (OpenAI Hero Card style) -->
-      <section id="featured" class="section featured-section">
-        <div class="section-inner">
-          <div class="featured-grid" id="featuredGrid">
-            <!-- Rendered by main.js -->
-          </div>
-        </div>
-      </section>
-
-      <!-- All Projects Grid & Filter -->
-      <section id="all-projects" class="section all-section">
-        <div class="section-inner">
-          <div class="section-header">
-            <h2 class="section-title">Projects Index</h2>
-            <div class="category-tabs" id="categoryTabs">
-              <button class="tab-btn active" data-category="all">All</button>
-              <button class="tab-btn" data-category="game">Game</button>
-              <button class="tab-btn" data-category="finance">Finance</button>
-              <button class="tab-btn" data-category="media">Media</button>
-              <button class="tab-btn" data-category="tool">Tools</button>
+    <div id="container">
+      <!-- Main Visual Showcase (간송미술관 메인 대형 슬라이더/히어로) -->
+      <section class="main-visual">
+        <div class="visual-wrap">
+          <div class="visual-slide active" id="mainSlide">
+            <div class="visual-bg">
+              <img id="visualImg" src="shots/dodgetoto.png" alt="DODGE TOTO" />
+              <div class="visual-dim"></div>
+            </div>
+            <div class="visual-caption">
+              <span class="caption-badge" id="visualBadge">현재 전시중 · NOW EXHIBITING</span>
+              <h2 class="caption-title" id="visualTitle">DODGE TOTO</h2>
+              <p class="caption-desc" id="visualDesc">
+                정통 피구 룰을 장착한 봇들의 60 FPS 경기와 실시간 스포츠 토토
+              </p>
+              <div class="caption-action">
+                <a id="visualLink" href="https://dodge-toto.onrender.com" target="_blank" rel="noopener" class="btn-enter">
+                  전시 입장하기 ↗
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="projects-grid" id="projectsGrid">
-            <!-- Rendered by main.js -->
+          <!-- Slider Controls -->
+          <div class="slider-ctrls">
+            <button type="button" class="ctrl-prev" id="prevSlide" aria-label="이전 작품">⟨</button>
+            <div class="ctrl-indicators" id="slideDots"></div>
+            <button type="button" class="ctrl-next" id="nextSlide" aria-label="다음 작품">⟩</button>
           </div>
         </div>
       </section>
-    </main>
 
-    <!-- Footer (OpenAI minimal style) -->
-    <footer class="footer">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <span class="footer-logo">ATELIER J</span>
-          <p class="footer-note">무료 인스턴스 특성상 첫 접속 시 30~50초의 서버 기상 시간이 소요될 수 있습니다.</p>
+      <!-- Philosophy / Editorial Statement (간송미술관 s_headline 스타일) -->
+      <section class="editorial-headline">
+        <div class="headline-inner">
+          <p class="headline-text">
+            ATELIER J는 가상 경제, 실시간 게임 시뮬레이션, 미디어와 창작 도구까지<br class="pc-br" />
+            독립적인 웹 시스템들을 연구하고 큐레이션하여 선보이는 디지털 아카이브 미술관입니다.
+          </p>
+          <span class="headline-sign">— Curated by DearJ</span>
         </div>
-        <div class="footer-right">
-          <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID</a>
-          <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">Helpdesk</a>
-          <a href="https://github.com/mrJ-ay" target="_blank" rel="noopener">GitHub ↗</a>
-          <span class="copyright">© 2026 ATELIER J</span>
+      </section>
+
+      <!-- Main Exhibition Section (간송미술관 s_exh 기획전시 스타일) -->
+      <section id="exhibitions" class="section-exh">
+        <div class="section-heading">
+          <div class="heading-left">
+            <span class="heading-sub">CURRENT EXHIBITIONS</span>
+            <h2 class="heading-title">특별 기획전</h2>
+          </div>
+          <div class="heading-right">
+            <p>ATELIER J에서 가장 역동적인 상호작용과 완성도를 지닌 대표 웹 프로젝트를 소개합니다.</p>
+          </div>
+        </div>
+
+        <div class="featured-list" id="featuredList">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- Archive Collection Grid (간송미술관 아카이브/소장품 그리드 스타일) -->
+      <section id="archive" class="section-archive">
+        <div class="section-heading">
+          <div class="heading-left">
+            <span class="heading-sub">COLLECTION ARCHIVE</span>
+            <h2 class="heading-title">소장품 아카이브 (14)</h2>
+          </div>
+          <div class="category-filter" id="categoryFilter">
+            <button class="filter-tab active" data-cat="all">전체</button>
+            <button class="filter-tab" data-cat="game">게임·시뮬레이션</button>
+            <button class="filter-tab" data-cat="finance">가상 경제·금융</button>
+            <button class="filter-tab" data-cat="media">미디어·문학</button>
+            <button class="filter-tab" data-cat="tool">도구·AI</button>
+          </div>
+        </div>
+
+        <div class="archive-grid" id="archiveGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+    </div>
+
+    <!-- Museum Footer (간송미술관 푸터 스타일) -->
+    <footer class="museum-footer">
+      <div class="footer-inner">
+        <div class="footer-info">
+          <strong class="footer-brand">ATELIER J</strong>
+          <p class="footer-desc">
+            일부 소장품은 Render 무료 인스턴스에서 구동되어 첫 방문 시 30~50초의 부팅 시간이 발생할 수 있습니다.<br />
+            통합 계정 로그인은 <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID</a>, 1:1 기술 문의 및 건의는 <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">고객센터</a>에서 지원합니다.
+          </p>
+        </div>
+        <div class="footer-meta">
+          <div class="footer-links">
+            <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">고객센터</a>
+            <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID SSO</a>
+            <a href="https://github.com/mrJ-ay" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+          <span class="footer-copy">© 2026 ATELIER J. All rights reserved.</span>
         </div>
       </div>
     </footer>
 
-    <script type="module" src="main.js?v=20261108d"></script>
+    <script type="module" src="main.js?v=20261108e"></script>
   </body>
 </html>
