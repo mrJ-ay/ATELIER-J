@@ -155,17 +155,18 @@ html, body {
   z-index: 1;
 }
 
-.work_dodgetoto {
-  background: url('shots/dodgetoto.png') no-repeat;
+.work_pigsty {
+  background: url('shots/pigsty.png') no-repeat;
 }
 
-.work_nexus {
-  background: url('shots/nexus.png') no-repeat;
+.work_fakepress {
+  background: url('shots/fakepress.png') no-repeat;
 }
 
-.work_onebank {
-  background: url('shots/onebank.png') no-repeat;
+.work_inkvoid {
+  background: url('shots/inkvoid.png') no-repeat;
 }
+
 
 /* Card Top Header */
 .work_card .top {
