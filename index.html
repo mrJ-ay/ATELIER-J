@@ -9,125 +9,171 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261108kansong_v2" />
+    <link rel="stylesheet" href="style.css?v=20261108_kansong_v3" />
   </head>
   <body>
-    <div class="landing_wrap">
-      <!-- Top Left Utility -->
-      <div id="side_util" class="util_area">
-        <ul>
-          <li class="login"><a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener">ONEID 로그인</a></li>
-          <li class="help"><a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener">고객센터</a></li>
-        </ul>
+    <!-- Top Fixed Header (항상 상단에 위치) -->
+    <header id="main_header">
+      <div class="header_left">
+        <a href="#home" class="header_brand" id="brandHomeLink">
+          <span class="en">ATELIER J</span>
+          <span class="divider">/</span>
+          <span class="ko">아뜰리에 J</span>
+        </a>
       </div>
-
-      <!-- Main Center: Logo + 3 Featured Works + Right Category Tabs -->
-      <div class="inr inr_kansong">
-        <!-- Brand Logo Block -->
-        <div class="card logo_card">
-          <div class="brand_logo_text">
-            <span class="en_brand">ATELIER J</span>
-            <span class="ko_brand">아뜰리에 J</span>
-            <p class="brand_desc">DearJ가 제작한 14개의 독립 웹 서비스와 가상 경제, 실시간 시뮬레이션의 관문입니다.</p>
-          </div>
+      <div class="header_right">
+        <div class="header_nav">
+          <button type="button" class="nav_btn active" data-view="home">HOME</button>
+          <button type="button" class="nav_btn" data-view="game">GAME</button>
+          <button type="button" class="nav_btn" data-view="finance">FINANCE</button>
+          <button type="button" class="nav_btn" data-view="media">MEDIA</button>
+          <button type="button" class="nav_btn" data-view="tool">TOOLS</button>
         </div>
-
-        <!-- 1. Featured Work 1: PIGSTY (피그스티) -->
-        <div class="card work_card work_pigsty">
-          <a href="https://pigsty.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
-          <div class="card_dim"></div>
-          <div class="top">
-            <div class="txt01">피그스티</div>
-            <div class="txt02">PIGSTY</div>
-          </div>
-          <div class="btm">
-            <a href="https://pigsty.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
-            <a href="https://pigsty.onrender.com" target="_blank" rel="noopener">커뮤니티 FEED</a>
-          </div>
-        </div>
-
-        <!-- 2. Featured Work 2: FAKEPRESS (페이크프레스) -->
-        <div class="card work_card work_fakepress">
-          <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
-          <div class="card_dim"></div>
-          <div class="top">
-            <div class="txt01">페이크프레스</div>
-            <div class="txt02">FAKEPRESS</div>
-          </div>
-          <div class="btm">
-            <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
-            <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener">기사발행 PRESS</a>
-          </div>
-        </div>
-
-        <!-- 3. Featured Work 3: INKVOID (잉크보이드) -->
-        <div class="card work_card work_inkvoid">
-          <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
-          <div class="card_dim"></div>
-          <div class="top">
-            <div class="txt01">잉크보이드</div>
-            <div class="txt02">INKVOID</div>
-          </div>
-          <div class="btm">
-            <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
-            <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener">서재읽기 LIBRARY</a>
-          </div>
-        </div>
-
-
-        <!-- Right Side: 4 Category Tabs (클릭 시 카테고리별 전체 작품 모달 오픈) -->
-        <ul class="side_tabs">
-          <li class="cat_tab" data-cat="game">
-            <button type="button">
-              <span class="ko">게임</span>
-              <span class="en">GAME</span>
-            </button>
-          </li>
-          <li class="cat_tab" data-cat="finance">
-            <button type="button">
-              <span class="ko">금융 · 마켓</span>
-              <span class="en">FINANCE</span>
-            </button>
-          </li>
-          <li class="cat_tab" data-cat="media">
-            <button type="button">
-              <span class="ko">미디어 · 창작</span>
-              <span class="en">MEDIA</span>
-            </button>
-          </li>
-          <li class="cat_tab" data-cat="tool">
-            <button type="button">
-              <span class="ko">도구 · AI</span>
-              <span class="en">TOOLS</span>
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Bottom Copyright -->
-      <div class="copyright">
-        &copy; 2026 ATELIER J · DearJ. All rights reserved.
-        <span class="cold_note">※ 무료 서버 특성상 처음 들어갈 때 30~50초의 부팅 시간이 발생할 수 있습니다.</span>
-      </div>
-    </div>
-
-    <!-- Category Modal / Drawer (우측 카테고리 탭 클릭 시 열리는 간송 스타일 아카이브 창) -->
-    <div id="categoryModal" class="category_modal" aria-hidden="true">
-      <div class="modal_overlay" id="modalOverlay"></div>
-      <div class="modal_panel">
-        <div class="panel_header">
-          <div>
-            <span class="cat_sub_badge" id="modalSub">CATEGORY</span>
-            <h3 class="panel_title" id="modalTitle">게임 (GAME)</h3>
-          </div>
-          <button type="button" class="panel_close" id="modalClose">✕</button>
-        </div>
-        <div class="panel_body" id="modalList">
-          <!-- Populated by main.js -->
+        <div class="header_util">
+          <a href="https://oneid-icvq.onrender.com" target="_blank" rel="noopener" class="util_link">ONEID 로그인</a>
+          <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener" class="util_link">고객센터</a>
         </div>
       </div>
-    </div>
+    </header>
 
-    <script type="module" src="main.js?v=20261108kansong_v2"></script>
+    <!-- 1. LANDING PORTAL VIEW (HOME) -->
+    <main id="view_home" class="page_view active">
+      <div class="landing_wrap">
+        <!-- Main Center: Logo + 3 Flagship Cards + Right Category Tabs -->
+        <div class="inr inr_kansong">
+          <!-- Brand Logo Block -->
+          <div class="card logo_card">
+            <div class="brand_logo_text">
+              <span class="en_brand">ATELIER J</span>
+              <span class="ko_brand">아뜰리에 J</span>
+              <p class="brand_desc">DearJ가 제작한 14개의 독립 웹 서비스와 가상 경제, 실시간 시뮬레이션의 관문입니다.</p>
+            </div>
+          </div>
+
+          <!-- 1. Featured Work 1: PIGSTY (피그스티) -->
+          <div class="card work_card work_pigsty">
+            <a href="https://pigsty.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
+            <div class="card_dim"></div>
+            <div class="top">
+              <div class="txt01">피그스티</div>
+              <div class="txt02">PIGSTY</div>
+            </div>
+            <div class="btm">
+              <a href="https://pigsty.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
+              <a href="https://pigsty.onrender.com" target="_blank" rel="noopener">커뮤니티 FEED</a>
+            </div>
+          </div>
+
+          <!-- 2. Featured Work 2: FAKEPRESS (페이크프레스) -->
+          <div class="card work_card work_fakepress">
+            <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
+            <div class="card_dim"></div>
+            <div class="top">
+              <div class="txt01">페이크프레스</div>
+              <div class="txt02">FAKEPRESS</div>
+            </div>
+            <div class="btm">
+              <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
+              <a href="https://fakepress-1.onrender.com" target="_blank" rel="noopener">기사발행 PRESS</a>
+            </div>
+          </div>
+
+          <!-- 3. Featured Work 3: INKVOID (잉크보이드) -->
+          <div class="card work_card work_inkvoid">
+            <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener" class="main_click"></a>
+            <div class="card_dim"></div>
+            <div class="top">
+              <div class="txt01">잉크보이드</div>
+              <div class="txt02">INKVOID</div>
+            </div>
+            <div class="btm">
+              <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener">웹사이트 WEBSITE</a>
+              <a href="https://inkvoid-eoqx.onrender.com" target="_blank" rel="noopener">서재읽기 LIBRARY</a>
+            </div>
+          </div>
+
+          <!-- Right Side: 4 Category Tabs (클릭 시 해당 카테고리 전체 페이지로 전환) -->
+          <ul class="side_tabs">
+            <li class="cat_tab" data-cat="game">
+              <button type="button">
+                <span class="ko">게임</span>
+                <span class="en">GAME</span>
+              </button>
+            </li>
+            <li class="cat_tab" data-cat="finance">
+              <button type="button">
+                <span class="ko">금융 · 마켓</span>
+                <span class="en">FINANCE</span>
+              </button>
+            </li>
+            <li class="cat_tab" data-cat="media">
+              <button type="button">
+                <span class="ko">미디어 · 창작</span>
+                <span class="en">MEDIA</span>
+              </button>
+            </li>
+            <li class="cat_tab" data-cat="tool">
+              <button type="button">
+                <span class="ko">도구 · AI</span>
+                <span class="en">TOOLS</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="copyright">
+          &copy; 2026 ATELIER J · DearJ. All rights reserved.
+          <span class="cold_note">※ 무료 서버 특성상 처음 들어갈 때 30~50초의 부팅 시간이 발생할 수 있습니다.</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- 2. CATEGORY ARCHIVE FULL-PAGE VIEW (GAME, FINANCE, MEDIA, TOOLS) -->
+    <main id="view_category" class="page_view">
+      <div class="category_page_wrap">
+        <!-- Subpage Hero Banner -->
+        <div class="cat_hero">
+          <div class="cat_hero_inner">
+            <div class="cat_breadcrumbs">
+              <button type="button" class="btn_back_home" id="btnBackHome">← 홈으로 돌아가기</button>
+              <span class="sep">/</span>
+              <span class="current_badge" id="catBadge">CATEGORY</span>
+            </div>
+            <h1 class="cat_main_title" id="catHeroTitle">GAME</h1>
+            <p class="cat_main_desc" id="catHeroDesc">실시간 물리 엔진과 시뮬레이션 알고리즘으로 구현된 인터랙티브 게임 서비스입니다.</p>
+          </div>
+        </div>
+
+        <!-- Category Grid Section -->
+        <div class="cat_content_wrap">
+          <div class="cat_nav_pills" id="catNavPills">
+            <button type="button" class="pill_tab active" data-target="game">게임 GAME</button>
+            <button type="button" class="pill_tab" data-target="finance">금융 · 마켓 FINANCE</button>
+            <button type="button" class="pill_tab" data-target="media">미디어 · 창작 MEDIA</button>
+            <button type="button" class="pill_tab" data-target="tool">도구 · AI TOOLS</button>
+          </div>
+
+          <div class="cat_cards_grid" id="categoryCardsGrid">
+            <!-- Dynamically populated by main.js -->
+          </div>
+        </div>
+
+        <!-- Subpage Footer -->
+        <footer class="sub_footer">
+          <div class="footer_inner">
+            <div class="footer_left">
+              <span class="f_brand">ATELIER J</span>
+              <span class="f_copy">&copy; 2026 ATELIER J · DearJ. All rights reserved.</span>
+            </div>
+            <div class="footer_right">
+              <span class="f_note">※ 무료 서버 인스턴스 슬립 해제 시 약 30~50초의 부팅 시간이 소요됩니다.</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </main>
+
+    <script type="module" src="main.js?v=20261108_kansong_v3"></script>
   </body>
 </html>
