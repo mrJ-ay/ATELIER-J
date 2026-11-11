@@ -106,6 +106,14 @@ export const categoryData = {
         url: 'https://inkvoid-eoqx.onrender.com',
         shot: 'inkvoid.png',
         desc: '서재에서 소설을 읽고 직접 작가로서 회차를 집필해 게시할 수 있는 웹소설 플랫폼.'
+      },
+      {
+        title: 'MY BAND',
+        ko: '가상 합주 스튜디오',
+        badge: '가상 합주 · 악보연주',
+        url: 'https://my-band-frbe.onrender.com',
+        shot: 'myband.png',
+        desc: 'MusicXML 악보를 업로드하고 오케스트라·밴드·마칭밴드 등 원하는 악단으로 합주를 감상하는 스튜디오.'
       }
     ]
   },
