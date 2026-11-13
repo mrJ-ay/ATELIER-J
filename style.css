@@ -720,7 +720,8 @@ html, body {
   }
 
   .side_tabs li {
-    width: 25%;
+    flex: 1;
+    width: auto;
   }
 
   .side_tabs button {

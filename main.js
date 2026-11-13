@@ -168,7 +168,18 @@ let currentView = 'home'; // 'home' | 'game' | 'finance' | 'media' | 'tool'
 
 // Render Category Page
 function renderCategoryPage(catKey) {
-  const data = categoryData[catKey];
+  let data;
+  if (catKey === 'all') {
+    const allWorks = Object.values(categoryData).flatMap((cat) => cat.works);
+    data = {
+      ko: '전체 웹사이트',
+      en: 'ALL WEBSITES',
+      desc: `ATELIER J에서 운영하는 모든 독립 웹 서비스(${allWorks.length}개)를 한눈에 모아 봅니다.`,
+      works: allWorks,
+    };
+  } else {
+    data = categoryData[catKey];
+  }
   if (!data) return;
 
   catBadge.textContent = `${data.ko} · ${data.en}`;
@@ -213,7 +224,7 @@ function navigateTo(targetView) {
     viewHome.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     history.replaceState(null, '', '#home');
-  } else if (categoryData[targetView]) {
+  } else if (targetView === 'all' || categoryData[targetView]) {
     currentView = targetView;
     renderCategoryPage(targetView);
     viewHome.classList.remove('active');
@@ -272,7 +283,7 @@ pillTabs.forEach((btn) => {
 window.addEventListener('DOMContentLoaded', () => {
   initOneIdAuth();
   const hash = window.location.hash.replace('#', '');
-  if (categoryData[hash]) {
+  if (hash === 'all' || categoryData[hash]) {
     navigateTo(hash);
   } else {
     navigateTo('home');
@@ -282,7 +293,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // 7. Popstate (browser back/forward)
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.replace('#', '');
-  if (categoryData[hash]) {
+  if (hash === 'all' || categoryData[hash]) {
     navigateTo(hash);
   } else {
     navigateTo('home');
