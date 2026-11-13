@@ -139,6 +139,14 @@ export const categoryData = {
         desc: '글을 쓰면 실제 종이 신문 기사 형식으로 실시간 조판해 이미지로 출력해 주는 도구.'
       },
       {
+        title: 'KINECTA',
+        ko: '키넥타 웹 검색 포탈',
+        badge: '웹 검색 · 포탈',
+        url: 'https://kinecta.vercel.app',
+        shot: 'kinecta.png',
+        desc: '딥 포레스트 & 세이지 미니멀 테마로 웹·뉴스·위키·개발·ATELIER J를 통합 검색하는 서핑 포탈.'
+      },
+      {
         title: 'HELPDESK',
         ko: '통합 고객센터',
         badge: '고객지원',
