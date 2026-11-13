@@ -270,6 +270,7 @@ pillTabs.forEach((btn) => {
 
 // 6. Handle URL Hash on load
 window.addEventListener('DOMContentLoaded', () => {
+  initOneIdAuth();
   const hash = window.location.hash.replace('#', '');
   if (categoryData[hash]) {
     navigateTo(hash);
@@ -287,3 +288,137 @@ window.addEventListener('popstate', () => {
     navigateTo('home');
   }
 });
+
+// 8. ONEID PKCE OAuth Authentication
+const ONEID_URL = 'https://oneid-ruddy.vercel.app';
+const ONEID_CLIENT_ID = 'atelierj';
+const TOKEN_KEY = 'atelierj_oneid_token';
+const USER_KEY = 'atelierj_oneid_user';
+
+function toBase64Url(bytes) {
+  let str = '';
+  bytes.forEach((b) => { str += String.fromCharCode(b); });
+  return btoa(str).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function randomBase64Url(len = 32) {
+  const bytes = new Uint8Array(len);
+  crypto.getRandomValues(bytes);
+  return toBase64Url(bytes);
+}
+
+async function sha256Base64Url(text) {
+  const data = new TextEncoder().encode(text);
+  const digest = await crypto.subtle.digest('SHA-256', data);
+  return toBase64Url(new Uint8Array(digest));
+}
+
+function getRedirectUri() {
+  return `${window.location.origin}/`;
+}
+
+function renderOneIdBtn(user) {
+  const btn = document.getElementById('oneidAuthBtn');
+  if (!btn) return;
+  if (user && user.nickname) {
+    btn.textContent = `${user.nickname}님 · 로그아웃`;
+    btn.title = '클릭하면 로그아웃합니다';
+  } else {
+    btn.textContent = 'ONEID 로그인';
+    btn.title = 'ONEID 통합 로그인';
+  }
+}
+
+async function startOneIdLogin() {
+  const verifier = randomBase64Url(48);
+  const state = randomBase64Url(24);
+  const challenge = await sha256Base64Url(verifier);
+  sessionStorage.setItem('atelierj_pkce_verifier', verifier);
+  sessionStorage.setItem('atelierj_pkce_state', state);
+
+  const params = new URLSearchParams({
+    client_id: ONEID_CLIENT_ID,
+    redirect_uri: getRedirectUri(),
+    code_challenge: challenge,
+    state,
+  });
+  window.location.assign(`${ONEID_URL}/login.html?${params.toString()}`);
+}
+
+async function initOneIdAuth() {
+  const btn = document.getElementById('oneidAuthBtn');
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const token = localStorage.getItem(TOKEN_KEY);
+      if (token) {
+        localStorage.removeItem(TOKEN_KEY);
+        localStorage.removeItem(USER_KEY);
+        renderOneIdBtn(null);
+      } else {
+        startOneIdLogin().catch(console.error);
+      }
+    });
+  }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const code = urlParams.get('code');
+  const state = urlParams.get('state');
+
+  if (code) {
+    const savedState = sessionStorage.getItem('atelierj_pkce_state');
+    const verifier = sessionStorage.getItem('atelierj_pkce_verifier');
+    sessionStorage.removeItem('atelierj_pkce_state');
+    sessionStorage.removeItem('atelierj_pkce_verifier');
+
+    const cleanUrl = `${window.location.pathname}${window.location.hash || ''}`;
+    window.history.replaceState({}, document.title, cleanUrl);
+
+    if (verifier && (!savedState || savedState === state)) {
+      try {
+        const res = await fetch(`${ONEID_URL}/api/oauth/token`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            client_id: ONEID_CLIENT_ID,
+            code,
+            redirect_uri: getRedirectUri(),
+            code_verifier: verifier,
+          }),
+        });
+        if (res.ok) {
+          const data = await res.json();
+          localStorage.setItem(TOKEN_KEY, data.access_token);
+          localStorage.setItem(USER_KEY, JSON.stringify(data.user));
+          renderOneIdBtn(data.user);
+          return;
+        }
+      } catch (err) {
+        console.error('ONEID token exchange failed:', err);
+      }
+    }
+  }
+
+  const token = localStorage.getItem(TOKEN_KEY);
+  const cachedUser = localStorage.getItem(USER_KEY);
+  if (cachedUser) {
+    try { renderOneIdBtn(JSON.parse(cachedUser)); } catch { /* ignore */ }
+  }
+  if (token) {
+    try {
+      const res = await fetch(`${ONEID_URL}/api/auth/me`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        const user = await res.json();
+        localStorage.setItem(USER_KEY, JSON.stringify(user));
+        renderOneIdBtn(user);
+      } else {
+        localStorage.removeItem(TOKEN_KEY);
+        localStorage.removeItem(USER_KEY);
+        renderOneIdBtn(null);
+      }
+    } catch { /* keep cached UI if offline */ }
+  }
+}
+
