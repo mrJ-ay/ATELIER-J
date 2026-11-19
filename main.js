@@ -6,22 +6,6 @@ export const categoryData = {
     desc: '실시간 물리 엔진과 시뮬레이션 알고리즘, WebSocket 기반으로 구현된 인터랙티브 게임 서비스 모음입니다.',
     works: [
       {
-        title: 'DODGE TOTO',
-        ko: '피구 토토',
-        badge: '시뮬레이션',
-        url: 'https://dodge-toto.onrender.com',
-        shot: 'dodgetoto.png',
-        desc: '정통 피구 룰을 장착한 알고리즘 봇들의 60 FPS 경기와 실시간 배당률 토토 시뮬레이션.'
-      },
-      {
-        title: 'NEON STRIP',
-        ko: '네온 스트립 슬롯 카지노',
-        badge: '카지노 · 금융',
-        url: 'https://vegas-slots-2izy.onrender.com',
-        shot: 'vegas.png',
-        desc: '라스베이거스 스타일 슬롯머신과 유저 간 칩 대출 및 상환 시스템이 융합된 가상 카지노.'
-      },
-      {
         title: 'GRAND THEFT BICYCLE',
         ko: '엄복동 자전거 절도 액션',
         badge: '2D 액션',
@@ -36,6 +20,14 @@ export const categoryData = {
         url: 'https://chaos-omok.onrender.com',
         shot: 'omok.png',
         desc: '실시간 방 생성과 관전, 친구 초대 기능을 제공하는 WebSocket 멀티플레이 오목.'
+      },
+      {
+        title: 'KEYWAR',
+        ko: '키워 · 실시간 1:1 랜덤 키배',
+        badge: '랜덤 매칭 · 키배',
+        url: 'https://keywar-96xe.onrender.com',
+        shot: 'keywar.png',
+        desc: 'PLAY를 누르면 즉시 1:1 랜덤 매칭되어 3초 카운트다운 후 주제 없이 바로 붙는 실시간 온라인 키배 아레나.'
       }
     ]
   },
@@ -114,6 +106,22 @@ export const categoryData = {
         url: 'https://my-band-frbe.onrender.com',
         shot: 'myband.png',
         desc: 'MusicXML 악보를 업로드하고 오케스트라·밴드·마칭밴드 등 원하는 악단으로 합주를 감상하는 스튜디오.'
+      },
+      {
+        title: 'IBM 704 VOX',
+        ko: 'IBM 704 음성 합성기',
+        badge: '보컬 신스 · TTS',
+        url: 'https://ibm704-vox.vercel.app',
+        shot: 'ibm704.png',
+        desc: '1961년 벨 연구소 IBM 704 Kelly–Lochbaum 성도 모델로 가사와 음정을 입력해 노래를 합성하는 웹 신디사이저.'
+      },
+      {
+        title: 'PULSE',
+        ko: '펄스 실시간 개인방송',
+        badge: '라이브 · WebRTC',
+        url: 'https://pulse-2g12.onrender.com',
+        shot: 'pulse.png',
+        desc: '화면공유·웹캠 WebRTC 송출, 채팅 창 분리, ONE BANK 실시간 후원 및 TTS 낭독을 지원하는 라이브 방송 플랫폼.'
       }
     ]
   },
@@ -147,16 +155,84 @@ export const categoryData = {
         desc: '딥 포레스트 & 세이지 미니멀 테마로 웹·뉴스·위키·개발·ATELIER J를 통합 검색하는 서핑 포탈.'
       },
       {
+        title: 'DISPATCH',
+        ko: '디스패치 실시간 메신저',
+        badge: '메신저 · 파일 전송',
+        url: 'https://dispatch-z3rj.onrender.com',
+        shot: 'dispatch.png',
+        desc: '게스트 방 ID 입장 및 ONEID 로그인, 파일 전송, 프로필 커스텀, 1:1 DM을 지원하는 실시간 웹 메신저.'
+      },
+      {
         title: 'HELPDESK',
         ko: '통합 고객센터',
         badge: '고객지원',
         url: 'https://oneid-helpdesk.onrender.com/?service=ATELIER%20J',
         shot: 'helpdesk.png',
         desc: '전체 서비스들의 1:1 고객 문의 접수, 기능 제안, 계정 제재 소명 처리를 수행하는 고객센터.'
+      },
+      {
+        title: 'LIVO',
+        ko: '리보 · 주변 병원·응급실',
+        badge: '헬스케어 · 위치',
+        url: 'https://livo-self.vercel.app',
+        shot: 'livo.png',
+        desc: '현재 위치 기반으로 주변 병·의원, 치과, 약국과 24시간 응급의료기관을 즉시 탐색하는 플랫폼.'
+      },
+      {
+        title: 'AGORA',
+        ko: '아고라 · 가상 국민의회',
+        badge: '가상의회 · 정책입법',
+        url: 'https://assembly-lovat.vercel.app',
+        shot: 'assembly.png',
+        desc: '정당 창당·300석 의석 배분·법안 표결을 진행하며, 의장 승인 시 통합 고객센터 운영정책으로 즉시 반영되는 가상 의회.'
+      },
+      {
+        title: 'CITIZEN PASS',
+        ko: '디지털 주민등록청 · 홀로그램 민증',
+        badge: '전자민증 · 신원조회',
+        url: 'https://citizen-pass-beryl.vercel.app',
+        shot: 'citizen-pass.png',
+        desc: 'ONEID 로그인 시 고유 주민등록번호(26XXXX)가 부여된 3D 홀로그램 민증을 발급하고 의회·피그스티·원뱅크 활동 및 전과를 통합 조회하는 주민등록청.'
       }
     ]
   }
 };
+
+const DEEPWEB_HASH = 'bf2886950bc3d4de709fd1c02c64b14ecdc02a07b9d6d8aeb64b0caea8f4df51';
+const DEEPWEB_STORAGE_KEY = 'atelier_deep_unlocked';
+const deepwebCategory = {
+  ko: '딥웹',
+  en: 'DEEP WEB · RESTRICTED',
+  desc: '접근 코드 인증을 통해서만 열람 가능한 비공개 아카이브 프로젝트입니다.',
+  works: [
+    {
+      title: 'DODGE TOTO',
+      ko: '피구 토토',
+      badge: '시뮬레이션 · 제한구역',
+      url: 'https://dodge-toto.onrender.com',
+      shot: 'dodgetoto.png',
+      desc: '정통 피구 룰을 장착한 알고리즘 봇들의 60 FPS 경기와 실시간 배당률 토토 시뮬레이션.'
+    },
+    {
+      title: 'NEON STRIP',
+      ko: '네온 스트립 슬롯 카지노',
+      badge: '카지노 · 제한구역',
+      url: 'https://vegas-slots-2izy.onrender.com',
+      shot: 'vegas.png',
+      desc: '라스베이거스 스타일 슬롯머신과 유저 간 칩 대출 및 상환 시스템이 융합된 가상 카지노.'
+    },
+    {
+      title: 'PIGSTY // DARK',
+      ko: '피그스티 다크 · 무검열 심연',
+      badge: '노검열 · 제한구역',
+      url: 'https://pigsty-dark.onrender.com',
+      shot: 'pigsty-dark.png',
+      desc: '금칙어 필터와 검열봇이 완전히 해제된 딥웹 전용 무검열 PIGSTY 커뮤니티.'
+    }
+  ]
+};
+
+let deepUnlocked = sessionStorage.getItem(DEEPWEB_STORAGE_KEY) === '1';
 
 // DOM References
 const viewHome = document.getElementById('view_home');
@@ -167,24 +243,61 @@ const navButtons = document.querySelectorAll('.header_nav .nav_btn');
 const catTabs = document.querySelectorAll('.cat_tab');
 const pillTabs = document.querySelectorAll('.pill_tab');
 
+const deepCodeForm = document.getElementById('deepCodeForm');
+const deepCodeInput = document.getElementById('deepCodeInput');
+const deepCodeBtn = document.getElementById('deepCodeBtn');
+const deepNavEls = document.querySelectorAll('.nav_deepweb, .cat_deepweb, .pill_deepweb');
+
 const catBadge = document.getElementById('catBadge');
 const catHeroTitle = document.getElementById('catHeroTitle');
 const catHeroDesc = document.getElementById('catHeroDesc');
 const categoryCardsGrid = document.getElementById('categoryCardsGrid');
 
-let currentView = 'home'; // 'home' | 'game' | 'finance' | 'media' | 'tool'
+let currentView = 'home'; // 'home' | 'game' | 'finance' | 'media' | 'tool' | 'deepweb'
+
+async function sha256Hex(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return Array.from(new Uint8Array(buf))
+    .map((b) => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+function applyDeepWebUI() {
+  deepNavEls.forEach((elItem) => {
+    elItem.hidden = !deepUnlocked;
+  });
+  if (deepCodeBtn && deepCodeInput) {
+    if (deepUnlocked) {
+      deepCodeBtn.textContent = 'LOCK';
+      deepCodeBtn.classList.add('is-unlocked');
+      deepCodeInput.placeholder = 'UNLOCKED';
+      deepCodeInput.value = '';
+    } else {
+      deepCodeBtn.textContent = 'ENTER';
+      deepCodeBtn.classList.remove('is-unlocked');
+      deepCodeInput.placeholder = 'ACCESS CODE';
+    }
+  }
+}
 
 // Render Category Page
 function renderCategoryPage(catKey) {
   let data;
   if (catKey === 'all') {
-    const allWorks = Object.values(categoryData).flatMap((cat) => cat.works);
+    const baseWorks = Object.values(categoryData).flatMap((cat) => cat.works);
+    const allWorks = deepUnlocked ? [...baseWorks, ...deepwebCategory.works] : baseWorks;
     data = {
       ko: '전체 웹사이트',
       en: 'ALL WEBSITES',
       desc: `ATELIER J에서 운영하는 모든 독립 웹 서비스(${allWorks.length}개)를 한눈에 모아 봅니다.`,
       works: allWorks,
     };
+  } else if (catKey === 'deepweb') {
+    if (!deepUnlocked) {
+      navigateTo('home');
+      return;
+    }
+    data = deepwebCategory;
   } else {
     data = categoryData[catKey];
   }
@@ -226,13 +339,16 @@ function renderCategoryPage(catKey) {
 
 // Switch View Router
 function navigateTo(targetView) {
+  if (targetView === 'deepweb' && !deepUnlocked) {
+    targetView = 'home';
+  }
   if (targetView === 'home') {
     currentView = 'home';
     viewCategory.classList.remove('active');
     viewHome.classList.add('active');
     window.scrollTo({ top: 0, behavior: 'smooth' });
     history.replaceState(null, '', '#home');
-  } else if (targetView === 'all' || categoryData[targetView]) {
+  } else if (targetView === 'all' || targetView === 'deepweb' || categoryData[targetView]) {
     currentView = targetView;
     renderCategoryPage(targetView);
     viewHome.classList.remove('active');
@@ -248,6 +364,33 @@ function navigateTo(targetView) {
 }
 
 // Event Listeners
+if (deepCodeForm) {
+  deepCodeForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (deepUnlocked && !deepCodeInput.value.trim()) {
+      deepUnlocked = false;
+      sessionStorage.removeItem(DEEPWEB_STORAGE_KEY);
+      applyDeepWebUI();
+      if (currentView === 'deepweb') navigateTo('home');
+      else if (currentView === 'all') renderCategoryPage('all');
+      return;
+    }
+
+    const code = deepCodeInput.value.trim();
+    if (!code) return;
+    const digest = await sha256Hex(code);
+    if (digest === DEEPWEB_HASH) {
+      deepUnlocked = true;
+      sessionStorage.setItem(DEEPWEB_STORAGE_KEY, '1');
+      applyDeepWebUI();
+      navigateTo('deepweb');
+    } else {
+      deepCodeInput.classList.add('is-error');
+      setTimeout(() => deepCodeInput.classList.remove('is-error'), 650);
+    }
+  });
+}
+
 // 1. Landing 4 Category side tabs
 catTabs.forEach((tab) => {
   tab.addEventListener('click', () => {
@@ -290,8 +433,9 @@ pillTabs.forEach((btn) => {
 // 6. Handle URL Hash on load
 window.addEventListener('DOMContentLoaded', () => {
   initOneIdAuth();
+  applyDeepWebUI();
   const hash = window.location.hash.replace('#', '');
-  if (hash === 'all' || categoryData[hash]) {
+  if (hash === 'all' || (hash === 'deepweb' && deepUnlocked) || categoryData[hash]) {
     navigateTo(hash);
   } else {
     navigateTo('home');
@@ -301,7 +445,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // 7. Popstate (browser back/forward)
 window.addEventListener('popstate', () => {
   const hash = window.location.hash.replace('#', '');
-  if (hash === 'all' || categoryData[hash]) {
+  if (hash === 'all' || (hash === 'deepweb' && deepUnlocked) || categoryData[hash]) {
     navigateTo(hash);
   } else {
     navigateTo('home');
