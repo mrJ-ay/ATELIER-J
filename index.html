@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=20261108_kansong_v3" />
+    <link rel="stylesheet" href="style.css?v=20261119_agora_v1" />
   </head>
   <body>
     <!-- Top Fixed Header (항상 상단에 위치) -->
@@ -29,8 +29,13 @@
           <button type="button" class="nav_btn" data-view="finance">FINANCE</button>
           <button type="button" class="nav_btn" data-view="media">MEDIA</button>
           <button type="button" class="nav_btn" data-view="tool">TOOLS</button>
+          <button type="button" class="nav_btn nav_deepweb" data-view="deepweb" hidden>DEEP WEB</button>
         </div>
         <div class="header_util">
+          <form id="deepCodeForm" class="deep_code_form" autocomplete="off">
+            <input id="deepCodeInput" type="text" placeholder="ACCESS CODE" aria-label="접근 코드 입력" />
+            <button type="submit" id="deepCodeBtn">ENTER</button>
+          </form>
           <a href="#login" id="oneidAuthBtn" class="util_link">ONEID 로그인</a>
           <a href="https://oneid-helpdesk.onrender.com/?service=ATELIER%20J" target="_blank" rel="noopener" class="util_link">고객센터</a>
         </div>
@@ -125,6 +130,12 @@
                 <span class="en">TOOLS</span>
               </button>
             </li>
+            <li class="cat_tab cat_deepweb" data-cat="deepweb" hidden>
+              <button type="button">
+                <span class="ko">딥웹</span>
+                <span class="en">DEEP WEB</span>
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -160,6 +171,7 @@
             <button type="button" class="pill_tab" data-target="finance">금융 · 마켓 FINANCE</button>
             <button type="button" class="pill_tab" data-target="media">미디어 · 창작 MEDIA</button>
             <button type="button" class="pill_tab" data-target="tool">도구 · AI TOOLS</button>
+            <button type="button" class="pill_tab pill_deepweb" data-target="deepweb" hidden>딥웹 DEEP WEB</button>
           </div>
 
           <div class="cat_cards_grid" id="categoryCardsGrid">
@@ -182,6 +194,6 @@
       </div>
     </main>
 
-    <script type="module" src="main.js?v=20261108_kansong_v3"></script>
+    <script type="module" src="main.js?v=20261120_citizenpass_v1"></script>
   </body>
 </html>
