@@ -188,11 +188,11 @@ export const categoryData = {
       },
       {
         title: 'CITIZEN PASS',
-        ko: '디지털 주민등록청 · 홀로그램 민증',
-        badge: '전자민증 · 신원조회',
+        ko: '통합 주민센터 · 민증 & 커플인증서',
+        badge: '주민센터 · 민증/커플등기',
         url: 'https://citizen-pass-beryl.vercel.app',
         shot: 'citizen-pass.png',
-        desc: 'ONEID 로그인 시 고유 주민등록번호(26XXXX)가 부여된 3D 홀로그램 민증을 발급하고 의회·피그스티·원뱅크 활동 및 전과를 통합 조회하는 주민등록청.'
+        desc: '3D 홀로그램 주민등록증 발급·신원조회(제1창구)와 전자서명·D-Day 기반 공식 커플인증서 발급·PNG 저장(제2창구)을 제공하는 통합 행정복지센터.'
       }
     ]
   }
