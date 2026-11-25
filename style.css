@@ -133,6 +133,72 @@ html, body {
   color: var(--accent-gold);
 }
 
+.deep_code_form {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#deepCodeInput {
+  width: 108px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 4px;
+  color: #e5e5e5;
+  font-size: 11px;
+  padding: 4px 8px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.2s ease, width 0.2s ease;
+}
+
+#deepCodeInput:focus {
+  border-color: var(--accent-gold);
+  width: 130px;
+}
+
+#deepCodeInput.is-error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
+}
+
+#deepCodeBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #d4d4d4;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+#deepCodeBtn:hover {
+  border-color: var(--accent-gold);
+  color: #fff;
+}
+
+#deepCodeBtn.is-unlocked {
+  border-color: #ef4444;
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+.nav_deepweb:not([hidden]),
+.pill_deepweb:not([hidden]) {
+  color: #fca5a5 !important;
+  border-color: rgba(239, 68, 68, 0.45) !important;
+}
+
+.nav_deepweb.active,
+.pill_deepweb.active {
+  background: rgba(220, 38, 38, 0.22) !important;
+  color: #ffffff !important;
+}
+
 /* ==========================================================================
    Page Views Controller (Single-Page App Transitions)
    ========================================================================== */
