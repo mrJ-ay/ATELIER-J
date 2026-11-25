@@ -59,6 +59,14 @@ export const categoryData = {
         url: 'https://jarket.onrender.com',
         shot: 'jarket.png',
         desc: '유저가 직접 물건을 올려 판매하고 카지노 칩을 벌 수 있는 가상 C2C 중고 마켓.'
+      },
+      {
+        title: 'CADASTRE',
+        ko: '카다스터 · 도시 지적도 & 부동산',
+        badge: '도시지도 · 부동산등기',
+        url: 'https://cadastre-delta.vercel.app',
+        shot: 'cadastre.png',
+        desc: '아텔리에 시티 5대 행정구역 지도 위에서 랜드마크와 빌딩을 매입·공동명의 등기하고 주민센터 민증 주소지와 연동하는 부동산 거래소.'
       }
     ]
   },
