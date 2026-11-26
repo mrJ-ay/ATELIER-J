@@ -201,6 +201,14 @@ export const categoryData = {
         url: 'https://citizen-pass-beryl.vercel.app',
         shot: 'citizen-pass.png',
         desc: '3D 홀로그램 주민등록증 발급·신원조회(제1창구)와 전자서명·D-Day 기반 공식 커플인증서 발급·PNG 저장(제2창구)을 제공하는 통합 행정복지센터.'
+      },
+      {
+        title: 'ЦНИИ-1 // PRISON',
+        ko: '중앙인민수감교화소 · 인민교정국',
+        badge: '수감교화소 · 강제노역',
+        url: 'https://prison-gold.vercel.app',
+        shot: 'prison.png',
+        desc: '수감 시 전 사이트 닉네임 옆에 [⛓️ 수감중] 표식이 각인되며, 시베리아 채석장 돌 깨기 노역·반성문 사면 심사·원뱅크 두부 사식 영치를 제공하는 중앙인민수감교화소.'
       }
     ]
   }
