@@ -209,6 +209,14 @@ export const categoryData = {
         url: 'https://prison-gold.vercel.app',
         shot: 'prison.png',
         desc: '수감 시 전 사이트 닉네임 옆에 [⛓️ 수감중] 표식이 각인되며, 시베리아 채석장 돌 깨기 노역·반성문 사면 심사·원뱅크 두부 사식 영치를 제공하는 중앙인민수감교화소.'
+      },
+      {
+        title: 'CURIA',
+        ko: '쿠리아 · 중앙사법원 & 변호인 법정',
+        badge: '사법원 · 소송/강제집행',
+        url: 'https://curia-sigma.vercel.app',
+        shot: 'curia.png',
+        desc: '민·형사 소장 접수, 원뱅크 에스크로 기반 자유 변호사 선임, 공개 변론(이의 있소!) 및 재판관 판결 선고 시 계좌 강제추심·교화소 자동 투옥이 집행되는 최고 법원.'
       }
     ]
   }
